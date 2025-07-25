@@ -1,13 +1,12 @@
 {
-  "headers": [
+  "version": 2,
+  "routes": [
     {
-      "source": "/Build/(.*).wasm",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/wasm"
-        }
-      ]
+      "src": "/Build/(.*)\\.wasm",
+      "headers": {
+        "Content-Type": "application/wasm"
+      },
+      "dest": "/Build/$1.wasm"
     }
   ]
 }
